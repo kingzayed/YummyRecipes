@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="4">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="170dp"
+            android:src="@drawable/muttonseekh"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:layout_height="170dp" />
+
+
+        <TextView
+            android:id="@+id/textname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:text="Seekh Kebab"
+            android:textColor="@color/colorAccent"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/displayingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Ingredients:-"
+            android:textColor="#000080"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:text="1.150 Gram Mutton (keema, minced)\n\n
+2.100 Gram Chicken (minced)\n\n
+3.2 tsp Ginger-garlic paste\n\n
+4.1 tsp Onion paste\n\n
+5.1 tsp Red chilli powder\n\n
+6.1 tsp Coriander powder\n\n
+7.1 tsp Cumin powder\n\n
+8.3/4 tsp Pepper, powdered\n\n
+9.1 tsp Dried mango powder\n\n
+10.1/4 tsp Saunth (Dry ginger powder)\n\n
+11.2 tsp Oil\n\n
+12.1 1/2 Tbsp Cashew paste\n\n
+13.1 1/2 Tbsp Cream\n\n
+14.2 Tbsp Besan\n\n
+15.1 Egg yolk\n\n
+16.To taste Salt\n\n
+17.To garnish Coriander leaves\n\n"
+            android:textSize="25sp"
+            android:id="@+id/ingredients"/>
+
+        <TextView
+            android:id="@+id/displaypreparation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Preparation:-"
+            android:textColor="#000080"
+            android:textSize="30sp" />
+
+
+        <TextView
+            android:id="@+id/Preparation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:ems="10"
+            android:scrollbars="vertical"
+            android:textSize="25sp"
+            android:text="1.In a bowl mix together the mutton mince and the chicken mince. Mix them with your hands.\n\n\n
+2.Add ginger-garlic paste to it along with onion paste, red chilli powder, coriander powder, cumin powder,\n powdered pepper, dried mango powder, saunth, oil, cashew paste and cream.\n Mix nicely.\n\n\n
+3.Add besan (chickpea flour) and egg yolk to bind. Mix well.\n\n\n
+4.Add salt to taste. Mix. Cover and keep in the fridge for 1 hour.\n\n\n
+5.Skewer the kebabs onto oiled skewers and grill or roast till the outside is nicely browned.\n Baste frequently with oil while grilling.\n\n\n
+6.Once the kebabs are cooked, remove to a serving platter and garnish with onion rings, fresh coriander leaves and lemon wedges.\n\n\n" />
+
+    </TableLayout>
+
+
+
+</ScrollView>

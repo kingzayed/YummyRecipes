@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="4">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="170dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/muttoncutleta"
+            android:layout_gravity="center"
+            android:layout_height="170dp" />
+
+
+        <TextView
+            android:id="@+id/textname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:text="Cutlet Kebab"
+            android:textColor="@color/colorAccent"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/displayingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Ingredients:-"
+            android:textColor="#000080"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:text="1.500 gms minced mutton\n\n
+2.1/2 tsp coriander seeds\n\n
+3.1 stick cinnamon\n\n
+4.1 tsp black pepper\n\n
+5.1 tsp cumin\n\n
+6.3 cloves\n\n
+7.1 cup refined oil\n\n
+8.1 onion, finely chopped\n\n
+9.15 garlic cloves\n\n
+10.1 medium knob, chopped ginger\n\n
+11.4 green chillies\n\n
+12.Salt to taste\n\n
+13.1/2 tsp turmeric powder\n\n
+14.1/2 tsp chilli powder\n\n
+15.500 ml water\n\n
+16.2 boiled potatoes\n\n
+17.A small bunch of fresh coriander\n\n
+18.1/2 lime\n\n"
+            android:textSize="25sp"
+            android:id="@+id/ingredients"/>
+
+        <TextView
+            android:id="@+id/displaypreparation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Preparation:-"
+            android:textColor="#000080"
+            android:textSize="30sp" />
+
+
+        <TextView
+            android:id="@+id/Preparation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:ems="10"
+            android:scrollbars="vertical"
+            android:textSize="25sp"
+            android:text="1.In a pan, dry roast coriander seeds, cinnamon, black pepper, cumin and cloves.\n Pound them together with a mortar and pestle.\n Transfer this garam masala into a small cup.\n\n\n
+2.Saute one finely chopped onion and refined oil in a pan.\n\n\n
+3.Pound garlic, ginger, green chilies and salt in a mortar and pestle.\n Add them into a pan and saute them together\n\n\n
+4.Add powder spices like turmeric powder, chili powder and salt into a pan and saute them all together.\n\n\n
+5.Add water into a pan and mix them well\n\n\n
+6.Add mutton mince, garam masala and salt into a pan and saute them together\n\n\n
+7.Transfer the mix into a bowl and add 2 smashed potatoes, green chillies, fresh coriander and half lime.\n\n\n
+8.Mix them well together and for binding use flour and bread crumbs\n\n\n
+9.Shape them into cutlets\n\n\n
+10.Pick three wide plates for cutlet binders.\n In the first plate, break open two eggs and mix them well.\n In the second plate, add half a cup of flour and in third plate, add seasoned bread crumbs and mix them well\n\n\n
+11.Coat the cutlets with flour, dip them in the egg and than coat them with the seasoned bread crumbs\n\n\n
+12.Keep them in a fridge for 20 minutes.\n\n\n
+13.Shallow fry the cutlets in refined oil.\n\n\n
+14.Garnish and serve hot.\n" />
+
+    </TableLayout>
+
+
+
+</ScrollView>

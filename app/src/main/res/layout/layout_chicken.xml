@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+    <GridView
+        android:id="@+id/chickengrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backgroundwood"
+        android:numColumns="2"
+        android:soundEffectsEnabled="true"></GridView>
+
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@android:color/transparent"
+        android:layout_marginLeft="15dp"
+        android:filterTouchesWhenObscured="true"
+        android:paddingTop="5dp"
+        android:soundEffectsEnabled="true" />
+
+
+    <TextView
+        android:id="@+id/chickennames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:fadeScrollbars="true"
+        android:textColor="#FFFFFF"
+        android:textColorLink="@android:color/background_light" />
+
+
+
+</LinearLayout>

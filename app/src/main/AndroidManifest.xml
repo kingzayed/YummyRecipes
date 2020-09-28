@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zayed.admin.yummyrecipes">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <meta-data
+        android:name="com.google.android.gms.ads.APPLICATION_ID"
+        android:value="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"/>
+
+    <supports-screens
+        android:smallScreens="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:xlargeScreens="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/recipe"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/recipe"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.zayed.admin.yummyrecipes.Kulfi"/>
+        <activity android:name="com.zayed.admin.yummyrecipes.ButterScotch"/>
+        <activity android:name="com.zayed.admin.yummyrecipes.Blueberry"/>
+        <activity android:name="com.zayed.admin.yummyrecipes.Mango"/>
+        <activity android:name="com.zayed.admin.yummyrecipes.Vanilla"/>
+        <activity android:name="com.zayed.admin.yummyrecipes.Stawberry"/>
+        <activity android:name="com.zayed.admin.yummyrecipes.Nutella"/>
+        <activity android:name="com.zayed.admin.yummyrecipes.PeachIceCream"/>
+        <activity android:name="com.zayed.admin.yummyrecipes.IceCreamGridView"/>
+        <activity android:name="com.zayed.admin.yummyrecipes.MisalPav"></activity>
+        <activity android:name="com.zayed.admin.yummyrecipes.MasalaDosa"></activity>
+        <activity android:name="com.zayed.admin.yummyrecipes.FryEgg"></activity>
+        <activity android:name="com.zayed.admin.yummyrecipes.Omlette"></activity>
+        <activity android:name="com.zayed.admin.yummyrecipes.Poha"></activity>
+        <activity android:name="com.zayed.admin.yummyrecipes.SabudanaKhirchdi"></activity>
+        <activity android:name="com.zayed.admin.yummyrecipes.Idli"></activity>
+        <activity android:name="com.zayed.admin.yummyrecipes.AlooParatha"></activity>
+        <activity android:name="com.zayed.admin.yummyrecipes.Malpua" />
+        <activity android:name="com.zayed.admin.yummyrecipes.BreakfastGridView"></activity>
+        <activity android:name="com.zayed.admin.yummyrecipes.BadamKheer" />
+        <activity android:name="com.zayed.admin.yummyrecipes.CarrotsHalwa" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChocoLavaCakes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.Donuts" />
+        <activity android:name="com.zayed.admin.yummyrecipes.FruitsSalads" />
+        <activity android:name="com.zayed.admin.yummyrecipes.Pancakes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.Rasgulla" />
+        <activity android:name="com.zayed.admin.yummyrecipes.Rasmali" />
+        <activity android:name="com.zayed.admin.yummyrecipes.GulabJamun" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenSandwiches" />
+        <activity android:name="com.zayed.admin.yummyrecipes.VegJalapenoPoppers" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenPizza" />
+        <activity android:name="com.zayed.admin.yummyrecipes.CheesePizza" />
+        <activity android:name="com.zayed.admin.yummyrecipes.FrenchFries" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenShawarma" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenBurger" />
+        <activity android:name="com.zayed.admin.yummyrecipes.VegBurger" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenFriedRice" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenHakkaNoodles" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChowMeinChicken" />
+        <activity android:name="com.zayed.admin.yummyrecipes.CreamChickenSoup" />
+        <activity android:name="com.zayed.admin.yummyrecipes.VegMachurian" />
+        <activity android:name="com.zayed.admin.yummyrecipes.VegSpringRoll" />
+        <activity android:name="com.zayed.admin.yummyrecipes.BajaTacos" />
+        <activity android:name="com.zayed.admin.yummyrecipes.GrilledSalmon" />
+        <activity android:name="com.zayed.admin.yummyrecipes.LobsterTails" />
+        <activity android:name="com.zayed.admin.yummyrecipes.MalabharFish" />
+        <activity android:name="com.zayed.admin.yummyrecipes.PrawnCurry" />
+        <activity android:name="com.zayed.admin.yummyrecipes.SkilletSalmon" />
+        <activity android:name="com.zayed.admin.yummyrecipes.SurmaiCurryRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.SalmonFryRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.BeanCurry" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChanaMasala" />
+        <activity android:name="com.zayed.admin.yummyrecipes.DalTadka" />
+        <activity android:name="com.zayed.admin.yummyrecipes.MalaiKofta" />
+        <activity android:name="com.zayed.admin.yummyrecipes.MatarPanner" />
+        <activity android:name="com.zayed.admin.yummyrecipes.PalakPanner" />
+        <activity android:name="com.zayed.admin.yummyrecipes.PavBhajiRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.VegCutlet" />
+        <activity android:name="com.zayed.admin.yummyrecipes.VegCrispyRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.AlooTikkiRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.MuttonPuloaRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.MuttonBiryani" />
+        <activity android:name="com.zayed.admin.yummyrecipes.RoganJoshRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.MuttonKorma" />
+        <activity android:name="com.zayed.admin.yummyrecipes.MuttonKeemaRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.MuttonkarahiRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.SeekhKebabrecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.CutletKebab" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenBiryaniRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenKormaRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenKoftaRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenHandiRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenTandooriRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenTikkaRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenSixtyFive" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenCrispyRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenlollipopRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ButterChickenRecipes" />
+        <activity android:name="com.zayed.admin.yummyrecipes.DesertsGridView" />
+        <activity android:name="com.zayed.admin.yummyrecipes.JunkFoodGridView" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChineseGridView" />
+        <activity android:name="com.zayed.admin.yummyrecipes.FishGridView" />
+        <activity android:name="com.zayed.admin.yummyrecipes.VegGridView" />
+        <activity android:name="com.zayed.admin.yummyrecipes.ChickenGridView" />
+        <activity android:name="com.zayed.admin.yummyrecipes.MuttonGridView" />
+        <activity android:name="com.zayed.admin.yummyrecipes.Main2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.zayed.admin.yummyrecipes.MainActivity" />
+    </application>
+
+</manifest>

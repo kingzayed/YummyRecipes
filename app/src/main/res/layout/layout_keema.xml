@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="4">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="170dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/muttonkeema"
+            android:layout_gravity="center"
+            android:layout_height="170dp" />
+
+
+        <TextView
+            android:id="@+id/textname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:text="Mutton Keema"
+            android:textColor="@color/colorAccent"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/displayingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Ingredients:-"
+            android:textColor="#000080"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:text="For Marination:\n\n
+1.1 Kg Qeema\n\n
+2.4 Whole Kachris (crushed)\n\n
+3.1 Cup Papaya (half-ripe), grated\n\n
+4.1/2 Cup Pineapple pulp\n\n
+5.1-1 1/2 tsp Red chilli powder\n\n
+6.1 tsp Garam Masala\n\n
+7.2 tsp Garlic paste\n\n
+8.1 tsp Ginger paste\n\n
+9.To taste Salt\n\n
+10.For cooking Qeema:\n\n
+11.250 Gram Curd\n\n
+12.4 Medium Onion (golden fried)\n\n
+13.4 Cloves\n\n
+14.1 Cup Oil\n\n"
+            android:textSize="25sp"
+            android:id="@+id/ingredients"/>
+
+        <TextView
+            android:id="@+id/displaypreparation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preparation:-"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000080"
+            android:textSize="30sp" />
+
+
+        <TextView
+            android:id="@+id/Preparation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:ems="10"
+            android:scrollbars="vertical"
+            android:textSize="25sp"/>
+
+    </TableLayout>
+
+
+
+</ScrollView>

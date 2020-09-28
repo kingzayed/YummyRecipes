@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="4">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="170dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/muttonkarahi"
+            android:layout_gravity="center"
+            android:layout_height="170dp" />
+
+
+        <TextView
+            android:id="@+id/textname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:text="Mutton Karahi"
+            android:textColor="@color/colorAccent"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/displayingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Ingredients:-"
+            android:textColor="#000080"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:text="1.500 gm washed and dried mutton\n\n
+2.5 medium crushed to paste garlic\n\n
+3.1/2 cup mustard oil\n\n
+4.2 teaspoon garam masala powder\n\n
+5.1/2 teaspoon powdered turmeric\n\n
+6.3 bay leaf\n\n
+7.1 small crushed to paste ginger\n\n
+8.1 cup crushed to paste onion\n\n
+9.1 tablespoon cumin seeds\n\n
+10.1 tablespoon powdered salt\n\n
+11.1/2 teaspoon powdered red peppers\n\n
+12.4 sprigs chopped coriander leaves\n\n"
+            android:textSize="25sp"
+            android:id="@+id/ingredients"/>
+
+        <TextView
+            android:id="@+id/displaypreparation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Preparation:-"
+            android:textColor="#000080"
+            android:textSize="25sp" />
+
+
+        <TextView
+            android:id="@+id/Preparation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:scrollbars="vertical"
+            android:textSize="25sp"
+            android:text="1.To prepare this easy recipe, take a pan and heat some oil over medium flame.\n Once the oil is hot enough, add the cumin seeds and bay leaf. \nWhen seeds splutter, add ginger, garlic and onion and saute over high flame till it turns light brown in colour.\n\n\n
+2.Add garam masala, salt, turmeric, coriander powder and red pepper.\n Once the masala mixture is cooked well, add meat and let it cook for sometime.\n To reduce the cooking, time cover with a lid anmd once the meat is well cooked remove the lid, stir occasionally, till the water dries up and fat separates.\n\n\n
+3.Add tomatoes and let it simmer, till fat separates.\n Serve hot garnished with coriander leaves.\n\n\n" />
+
+    </TableLayout>
+
+
+
+</ScrollView>
