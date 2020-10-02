@@ -1,65 +1,99 @@
-package com.zayed.admin.yummyrecipes;
+package com.zayed.admin.yummyrecipes
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.app.Activity
+import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 
-public class PavBhajiRecipes extends Activity {
+class PavBhajiRecipes : Activity() {
+    private var imageView: ImageView? = null
+    private var textName: TextView? = null
+    private var textingredients: TextView? = null
+    private var textPreparation: TextView? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.layout_pavbhaji)
+        imageView = findViewById<View>(R.id.imageview) as ImageView
+        textName = findViewById<View>(R.id.textname) as TextView
+        textingredients = findViewById<View>(R.id.ingredients) as TextView
+        textPreparation = findViewById<View>(R.id.Preparation) as TextView
+        val ing = """
+            1.1 tsp Oil
 
-    private ImageView imageView;
-    private TextView textName;
-    private TextView textingredients;
-    private TextView textPreparation;
+            2.4 cubes Large Butter, finely chopped
+
+            3.1 Cup Onion, chopped
+
+            4.1 tsp Ginger-Garlic paste
+
+            5.1/2 Cup Lauki, chopped
+
+            6.1/2 Cup Capsicum, chopped
+
+            7.1 Cup Potatoes, chopped
+
+            8.1/2 Cup Beetroot, chopped
+
+            9.2 tsp Salt
+
+            10.1 tsp Chili powder
+
+            11.3 tsp Pav Bhaji Masala
+
+            12.1 tsp Red chili powder
+
+            13.1/2 Cup Tomato puree
+
+            14.1 cube To taste Butter
+
+            15.1 Bunch Coriander leaves
+
+            For Pav:
+
+            Butter
+
+            Pav Bhaji masala
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_pavbhaji);
+            """.trimIndent()
+        textingredients!!.text = ing
+        textingredients!!.movementMethod = ScrollingMovementMethod()
+        val prepare = """
+            1.Heat oil in a pan. Add cubes of butter along with onionPav Bhaji
 
 
-        imageView = (ImageView)findViewById(R.id.imageview);
-        textName = (TextView)findViewById(R.id.textname);
-        textingredients = (TextView)findViewById(R.id.ingredients);
-        textPreparation = (TextView) findViewById(R.id.Preparation);
+            2.Saute till golden brown and then add ginger garlic paste. Mix well.Pav Bhaji
 
 
-        String ing = "1.1 tsp Oil\n\n" +
-                "2.4 cubes Large Butter, finely chopped\n\n" +
-                "3.1 Cup Onion, chopped\n\n" +
-                "4.1 tsp Ginger-Garlic paste\n\n" +
-                "5.1/2 Cup Lauki, chopped\n\n" +
-                "6.1/2 Cup Capsicum, chopped\n\n" +
-                "7.1 Cup Potatoes, chopped\n\n" +
-                "8.1/2 Cup Beetroot, chopped\n\n" +
-                "9.2 tsp Salt\n\n" +
-                "10.1 tsp Chili powder\n\n" +
-                "11.3 tsp Pav Bhaji Masala\n\n" +
-                "12.1 tsp Red chili powder\n\n" +
-                "13.1/2 Cup Tomato puree\n\n" +
-                "14.1 cube To taste Butter\n\n" +
-                "15.1 Bunch Coriander leaves\n\n" +
-                "For Pav:\n\n" +
-                "Butter\n\n" +
-                "Pav Bhaji masala\n\n";
-        textingredients.setText(ing);
-        textingredients.setMovementMethod(new ScrollingMovementMethod());
+            3.Now add chopped lauki along with coriander and mix well, followed by a cup of chopped potatoes. Mix and mash well together.Pav Bhaji
 
 
-        String prepare = "1.Heat oil in a pan. Add cubes of butter along with onionPav Bhaji\n\n\n" +
-                "2.Saute till golden brown and then add ginger garlic paste. Mix well.Pav Bhaji\n\n\n" +
-                "3.Now add chopped lauki along with coriander and mix well, followed by a cup of chopped potatoes. Mix and mash well together.Pav Bhaji\n\n\n" +
-                "4.Add chopped beetroot, salt, chilli powder and pav bhaji masala to the mashed mixture. Mix well.Pav Bhaji\n\n\n" +
-                "5.Now add the tomato puree.Pav Bhaji\n\n\n" +
-                "6.Mix the tomato puree thoroughly and then add butter followed by coriander leaves to the cooked bhaaji. Mix thoroughly.Pav Bhaji\n\n\n" +
-                "Prepare Pav:\n\n\n" +
-                "1.Spread some butter all over the pav.Pav Bhaji\n\n\n" +
-                "2.Sprinkle pav bhaji masala over it.Pav Bhaji\n\n\n" +
-                "3.Toast it on the pan for a while till it becomes golden brown.Pav Bhaji\n\n\n" +
-                "4.Serve hot along with a lemon wedge, chopped onion and green chilli.";
-        textPreparation.setText(prepare);
-        textPreparation.setMovementMethod(new ScrollingMovementMethod());
+            4.Add chopped beetroot, salt, chilli powder and pav bhaji masala to the mashed mixture. Mix well.Pav Bhaji
+
+
+            5.Now add the tomato puree.Pav Bhaji
+
+
+            6.Mix the tomato puree thoroughly and then add butter followed by coriander leaves to the cooked bhaaji. Mix thoroughly.Pav Bhaji
+
+
+            Prepare Pav:
+
+
+            1.Spread some butter all over the pav.Pav Bhaji
+
+
+            2.Sprinkle pav bhaji masala over it.Pav Bhaji
+
+
+            3.Toast it on the pan for a while till it becomes golden brown.Pav Bhaji
+
+
+            4.Serve hot along with a lemon wedge, chopped onion and green chilli.
+            """.trimIndent()
+        textPreparation!!.text = prepare
+        textPreparation!!.movementMethod = ScrollingMovementMethod()
     }
 }

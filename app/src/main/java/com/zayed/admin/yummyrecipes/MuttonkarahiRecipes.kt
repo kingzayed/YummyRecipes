@@ -1,27 +1,22 @@
-package com.zayed.admin.yummyrecipes;
+package com.zayed.admin.yummyrecipes
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.app.Activity
+import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 
-public class MuttonkarahiRecipes extends Activity {
-
-    private ImageView imageView;
-    private TextView textName;
-    private TextView textingredients;
-    private TextView textPreparation;
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_muttonkarahi);
-
-
-        imageView = (ImageView)findViewById(R.id.imageview);
-        textName = (TextView)findViewById(R.id.textname);
-        textingredients = (TextView)findViewById(R.id.ingredients);
-        textPreparation = (TextView) findViewById(R.id.Preparation);
+class MuttonkarahiRecipes : Activity() {
+    private var imageView: ImageView? = null
+    private var textName: TextView? = null
+    private var textingredients: TextView? = null
+    private var textPreparation: TextView? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.layout_muttonkarahi)
+        imageView = findViewById<View>(R.id.imageview) as ImageView
+        textName = findViewById<View>(R.id.textname) as TextView
+        textingredients = findViewById<View>(R.id.ingredients) as TextView
+        textPreparation = findViewById<View>(R.id.Preparation) as TextView
     }
 }

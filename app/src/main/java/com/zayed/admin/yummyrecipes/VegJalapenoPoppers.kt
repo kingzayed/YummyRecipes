@@ -1,51 +1,66 @@
-package com.zayed.admin.yummyrecipes;
+package com.zayed.admin.yummyrecipes
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.app.Activity
+import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 
-public class VegJalapenoPoppers extends Activity {
+class VegJalapenoPoppers : Activity() {
+    private var imageView: ImageView? = null
+    private var textName: TextView? = null
+    private var textingredients: TextView? = null
+    private var textPreparation: TextView? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.layout_jalpanenopoppers)
+        imageView = findViewById<View>(R.id.imageview) as ImageView
+        textName = findViewById<View>(R.id.textname) as TextView
+        textingredients = findViewById<View>(R.id.ingredients) as TextView
+        textPreparation = findViewById<View>(R.id.Preparation) as TextView
+        val ing = """
+            1.100gms - Cream cheese softened
 
-    private ImageView imageView;
-    private TextView textName;
-    private TextView textingredients;
-    private TextView textPreparation;
+            2.100gms - shredded cheddar cheese
+
+            3.5 Jalapeno peppers, seeded and halved
+
+            4.100ml - Milk
+
+            5.50gms - all-purpose flour
+
+            6.50gms - bread crumbs
+
+            7.200ml - oil for frying
+            """.trimIndent()
+        textingredients!!.text = ing
+        textingredients!!.movementMethod = ScrollingMovementMethod()
+        val prepare = """
+            1.In a medium bowl, mix the cream cheese, Cheddar cheese.
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_jalpanenopoppers);
+            2.Stuff mixture into the jalapeno pepper halves.
 
 
-        imageView = (ImageView)findViewById(R.id.imageview);
-        textName = (TextView)findViewById(R.id.textname);
-        textingredients = (TextView)findViewById(R.id.ingredients);
-        textPreparation = (TextView) findViewById(R.id.Preparation);
+            3.Dip the stuffed jalapenos first into the milk then into the flour.
 
 
-        String ing = "1.100gms - Cream cheese softened\n\n" +
-                "2.100gms - shredded cheddar cheese\n\n" +
-                "3.5 Jalapeno peppers, seeded and halved\n\n" +
-                "4.100ml - Milk\n\n" +
-                "5.50gms - all-purpose flour\n\n" +
-                "6.50gms - bread crumbs\n\n" +
-                "7.200ml - oil for frying";
-        textingredients.setText(ing);
-        textingredients.setMovementMethod(new ScrollingMovementMethod());
+            4.Dry for about 10 minutes.
 
 
-        String prepare = "1.In a medium bowl, mix the cream cheese, Cheddar cheese.\n\n\n" +
-                "2.Stuff mixture into the jalapeno pepper halves.\n\n\n" +
-                "3.Dip the stuffed jalapenos first into the milk then into the flour.\n\n\n" +
-                "4.Dry for about 10 minutes.\n\n\n" +
-                "5.Dip the jalapenos in milk again and then the breadcrumbs.\n\n\n" +
-                "6.Allow them to dry, ensure the entire surface is coated.\n\n\n" +
-                "7.Deep fry the coated jalapenos 5 minutes each, until golden brown.\n\n\n" +
-                "8.Remove and let drain on a paper towel.";
-        textPreparation.setText(prepare);
-        textPreparation.setMovementMethod(new ScrollingMovementMethod());
+            5.Dip the jalapenos in milk again and then the breadcrumbs.
+
+
+            6.Allow them to dry, ensure the entire surface is coated.
+
+
+            7.Deep fry the coated jalapenos 5 minutes each, until golden brown.
+
+
+            8.Remove and let drain on a paper towel.
+            """.trimIndent()
+        textPreparation!!.text = prepare
+        textPreparation!!.movementMethod = ScrollingMovementMethod()
     }
 }

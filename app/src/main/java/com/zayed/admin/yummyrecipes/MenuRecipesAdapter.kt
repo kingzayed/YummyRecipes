@@ -1,64 +1,39 @@
-package com.zayed.admin.yummyrecipes;
+package com.zayed.admin.yummyrecipes
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.BaseAdapter
+import android.widget.ImageView
+import android.widget.ListView
+import android.widget.TextView
 
-public class MenuRecipesAdapter extends BaseAdapter {
-
-    private int [] MenuImages;
-    private MenuRecipesAdapter menuAdapter;
-    private String [] MenuNames;
-    private Context context;
-    private ListView MenuListview;
-
-    public MenuRecipesAdapter(Context context,int[] menuimages,String[] menunames)
-    {
-        this.context = context;
-        this.MenuImages = menuimages;
-        this.MenuNames = menunames;
+class MenuRecipesAdapter(private val context: Context, private val MenuImages: IntArray, private val MenuNames: Array<String>) : BaseAdapter() {
+    private val menuAdapter: MenuRecipesAdapter? = null
+    private val MenuListview: ListView? = null
+    override fun getCount(): Int {
+        return MenuImages.size
     }
 
-    @Override
-    public int getCount() {
-        return MenuImages.length;
+    override fun getItem(position: Int): Any? {
+        return null
     }
 
-    @Override
-    public Object getItem(int position) {
-        return null;
+    override fun getItemId(position: Int): Long {
+        return 0
     }
 
-    @Override
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View view;
-        ImageView mimageView;
-        TextView textView;
-
-        if(convertView == null)
-        {
-            view = LayoutInflater.from(context).inflate(R.layout.layout_menu,null);
-        }
-        else
-        {
-            view = convertView;
-        }
-        mimageView = (ImageView)view.findViewById(R.id.imageview);
-        mimageView.setImageResource(MenuImages[position]);
-        textView = (TextView)view.findViewById(R.id.menunames);
-        textView.setText(MenuNames[position]+"");
-        textView.setTextSize(25);
-        return view;
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val view: View
+        val mimageView: ImageView
+        val textView: TextView
+        view = convertView ?: LayoutInflater.from(context).inflate(R.layout.layout_menu, null)
+        mimageView = view.findViewById<View>(R.id.imageview) as ImageView
+        mimageView.setImageResource(MenuImages[position])
+        textView = view.findViewById<View>(R.id.menunames) as TextView
+        textView.text = MenuNames[position] + ""
+        textView.textSize = 25f
+        return view
     }
 }
-

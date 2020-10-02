@@ -1,64 +1,38 @@
-package com.zayed.admin.yummyrecipes;
+package com.zayed.admin.yummyrecipes
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.BaseAdapter
+import android.widget.GridView
+import android.widget.ImageView
+import android.widget.TextView
 
-public class IceCreamGridViewAdapter extends BaseAdapter {
-
-    private int [] IceCreamMenuImages;
-    private String [] IceCreamMenuNames;
-    private Context context;
-    private GridView gridView;
-
-
-    public IceCreamGridViewAdapter(int[] iceCreamMenuImages, String[] iceCreamMenuNames, Context context) {
-        IceCreamMenuImages = iceCreamMenuImages;
-        IceCreamMenuNames = iceCreamMenuNames;
-        this.context = context;
+class IceCreamGridViewAdapter(private val IceCreamMenuImages: IntArray, private val IceCreamMenuNames: Array<String>, private val context: Context) : BaseAdapter() {
+    private val gridView: GridView? = null
+    override fun getCount(): Int {
+        return IceCreamMenuImages.size
     }
 
-    @Override
-    public int getCount() {
-        return IceCreamMenuImages.length;
+    override fun getItem(position: Int): Any? {
+        return null
     }
 
-    @Override
-    public Object getItem(int position) {
-        return null;
+    override fun getItemId(position: Int): Long {
+        return 0
     }
 
-    @Override
-    public long getItemId(int position) {
-        return 0;
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val view: View
+        val imageView: ImageView
+        val textView: TextView
+        view = convertView ?: LayoutInflater.from(context).inflate(R.layout.layout_icecream, null)
+        imageView = view.findViewById<View>(R.id.imageview) as ImageView
+        imageView.setImageResource(IceCreamMenuImages[position])
+        textView = view.findViewById<View>(R.id.icecreamname) as TextView
+        textView.text = IceCreamMenuNames[position] + ""
+        textView.textSize = 20f
+        return view
     }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View view;
-        ImageView imageView;
-        TextView textView;
-
-        if (convertView == null)
-        {
-            view = LayoutInflater.from(context).inflate(R.layout.layout_icecream,null);
-        }
-        else
-        {
-            view = convertView;
-        }
-        imageView = (ImageView)view.findViewById(R.id.imageview);
-        imageView.setImageResource(IceCreamMenuImages[position]);
-        textView = (TextView)view.findViewById(R.id.icecreamname);
-        textView.setText(IceCreamMenuNames[position]+ "");
-        textView.setTextSize(20);
-        return view;
-    }
-
 }
-

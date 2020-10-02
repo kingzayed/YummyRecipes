@@ -1,64 +1,38 @@
-package com.zayed.admin.yummyrecipes;
+package com.zayed.admin.yummyrecipes
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.BaseAdapter
+import android.widget.GridView
+import android.widget.ImageView
+import android.widget.TextView
 
-public class BreakfastGridViewAdapter extends BaseAdapter {
-
-    private int [] BreakfastMenuImages;
-    private String [] BreakfastMenuNames;
-    private Context context;
-    private GridView gridView;
-
-
-
-    public BreakfastGridViewAdapter(Context context, int[] breakfastMenuImages, String[] breakfastMenuNames) {
-        this.context = context;
-        this.BreakfastMenuImages =breakfastMenuImages;
-        this.BreakfastMenuNames = breakfastMenuNames;
+class BreakfastGridViewAdapter(private val context: Context, private val BreakfastMenuImages: IntArray, private val BreakfastMenuNames: Array<String>) : BaseAdapter() {
+    private val gridView: GridView? = null
+    override fun getCount(): Int {
+        return BreakfastMenuImages.size
     }
 
-    @Override
-    public int getCount() {
-        return BreakfastMenuImages.length;
+    override fun getItem(position: Int): Any? {
+        return null
     }
 
-    @Override
-    public Object getItem(int position) {
-        return null;
+    override fun getItemId(position: Int): Long {
+        return 0
     }
 
-    @Override
-    public long getItemId(int position) {
-        return 0;
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val view: View
+        val imageView: ImageView
+        val textView: TextView
+        view = convertView ?: LayoutInflater.from(context).inflate(R.layout.layout_breakfast, null)
+        imageView = view.findViewById<View>(R.id.imageview) as ImageView
+        imageView.setImageResource(BreakfastMenuImages[position])
+        textView = view.findViewById<View>(R.id.breakfastnames) as TextView
+        textView.text = BreakfastMenuNames[position] + ""
+        textView.textSize = 20f
+        return view
     }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View view;
-        ImageView imageView;
-        TextView textView;
-
-        if (convertView == null)
-        {
-            view = LayoutInflater.from(context).inflate(R.layout.layout_breakfast,null);
-        }
-        else
-        {
-            view = convertView;
-        }
-        imageView = (ImageView)view.findViewById(R.id.imageview);
-        imageView.setImageResource(BreakfastMenuImages[position]);
-        textView = (TextView)view.findViewById(R.id.breakfastnames);
-        textView.setText(BreakfastMenuNames[position]+ "");
-        textView.setTextSize(20);
-        return view;
-    }
-
 }

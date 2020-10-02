@@ -1,63 +1,38 @@
-package com.zayed.admin.yummyrecipes;
+package com.zayed.admin.yummyrecipes
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.BaseAdapter
+import android.widget.GridView
+import android.widget.ImageView
+import android.widget.TextView
 
-public class FishGridViewAdapter extends BaseAdapter {
-
-    private GridView gridView;
-    private int [] FishImages;
-    private String [] FishNames;
-    private Context context;
-
-    public FishGridViewAdapter(Context context, int[] fishImages, String[] fishNames) {
-        this.context = context;
-        this.FishImages = fishImages;
-        this.FishNames = fishNames;
+class FishGridViewAdapter(private val context: Context, private val FishImages: IntArray, private val FishNames: Array<String>) : BaseAdapter() {
+    private val gridView: GridView? = null
+    override fun getCount(): Int {
+        return FishImages.size
     }
 
-    @Override
-    public int getCount() {
-        return FishImages.length;
+    override fun getItem(position: Int): Any? {
+        return null
     }
 
-    @Override
-    public Object getItem(int position) {
-        return null;
+    override fun getItemId(position: Int): Long {
+        return 0
     }
 
-    @Override
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View view;
-        ImageView imageView;
-        TextView textView;
-
-        if (convertView == null)
-        {
-            view = LayoutInflater.from(context).inflate(R.layout.layout_fish,null);
-        }
-        else
-        {
-            view = convertView;
-        }
-        imageView = (ImageView)view.findViewById(R.id.imageview);
-        imageView.setImageResource(FishImages[position]);
-        textView = (TextView)view.findViewById(R.id.textfish);
-        textView.setText(FishNames[position] + "");
-        textView.setTextSize(20);
-
-
-        return view;
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        val view: View
+        val imageView: ImageView
+        val textView: TextView
+        view = convertView ?: LayoutInflater.from(context).inflate(R.layout.layout_fish, null)
+        imageView = view.findViewById<View>(R.id.imageview) as ImageView
+        imageView.setImageResource(FishImages[position])
+        textView = view.findViewById<View>(R.id.textfish) as TextView
+        textView.text = FishNames[position] + ""
+        textView.textSize = 20f
+        return view
     }
 }

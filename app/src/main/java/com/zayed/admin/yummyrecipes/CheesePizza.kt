@@ -1,68 +1,112 @@
-package com.zayed.admin.yummyrecipes;
+package com.zayed.admin.yummyrecipes
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.app.Activity
+import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 
-public class CheesePizza extends Activity {
+class CheesePizza : Activity() {
+    private var imageView: ImageView? = null
+    private var textName: TextView? = null
+    private var textingredients: TextView? = null
+    private var textPreparation: TextView? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.layout_cheesepizza)
+        imageView = findViewById<View>(R.id.imageview) as ImageView
+        textName = findViewById<View>(R.id.textname) as TextView
+        textingredients = findViewById<View>(R.id.ingredients) as TextView
+        textPreparation = findViewById<View>(R.id.Preparation) as TextView
+        val ing = """
+            For Pizza dough:
 
-    private ImageView imageView;
-    private TextView textName;
-    private TextView textingredients;
-    private TextView textPreparation;
+            1.500 Gram Flour
+
+            2.Salt
+
+            3.300 Ml Tepid Water
+
+            4.7 Gram Dried yeast
+
+            5.1/2 tsp Sugar
+
+            6.30 Ml Olive Oil
+
+            7.Extra Virgin olive oil
+
+            For the topping:
+
+            1.Passata sauce
+
+            2.1 Cup Mozzarella cheese, grated
+
+            3.Handful Basil leaves
+
+            4.Pepper
+
+            5.Extra virgin olive oil
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_cheesepizza);
+            """.trimIndent()
+        textingredients!!.text = ing
+        textingredients!!.movementMethod = ScrollingMovementMethod()
+        val prepare = """
+            Prepare the Pizza dough:
 
 
-        imageView = (ImageView)findViewById(R.id.imageview);
-        textName = (TextView)findViewById(R.id.textname);
-        textingredients = (TextView)findViewById(R.id.ingredients);
-        textPreparation = (TextView) findViewById(R.id.Preparation);
+            1.Sieve flour with salt and add yeast to tepid water and stir in sugar. Leave aside for 6 to 8 minutes.
 
 
-        String ing = "For Pizza dough:\n\n" +
-                "1.500 Gram Flour\n\n" +
-                "2.Salt\n\n" +
-                "3.300 Ml Tepid Water\n\n" +
-                "4.7 Gram Dried yeast\n\n" +
-                "5.1/2 tsp Sugar\n\n" +
-                "6.30 Ml Olive Oil\n\n" +
-                "7.Extra Virgin olive oil\n\n" +
-                "For the topping:\n\n" +
-                "1.Passata sauce\n\n" +
-                "2.1 Cup Mozzarella cheese, grated\n\n" +
-                "3.Handful Basil leaves\n\n" +
-                "4.Pepper\n\n" +
-                "5.Extra virgin olive oil\n\n";
-        textingredients.setText(ing);
-        textingredients.setMovementMethod(new ScrollingMovementMethod());
+            2.In a mixing bowl, create a well in the middle of the flour mixture and add 100 ml of yeast mixture and 15 ml olive oil.
 
 
-        String prepare = "Prepare the Pizza dough:\n\n\n" +
-                "1.Sieve flour with salt and add yeast to tepid water and stir in sugar. Leave aside for 6 to 8 minutes.\n\n\n" +
-                "2.In a mixing bowl, create a well in the middle of the flour mixture and add 100 ml of yeast mixture and 15 ml olive oil.\n\n\n" +
-                "3.Add in the rest of yeast mixture and remaining olive oil.\n\n\n" +
-                "4.Flour the kneading surface so that the dough does not stick.\n\n\n" +
-                "5.Mix together with your fingers till you have a dough. Knead for 10 minutes till you have an elastic, even product.\n\n\n" +
-                "Proving the Dough:\n\n\n" +
-                "1.Place the dough in a bowl and drizzle generously with extra virgin olive oil.\n\n\n" +
-                "2.Cover bowl with cling film and place in a warm area to prove for 50 minutes.\n\n\n" +
-                "3.After the dough is proved, bash the air out and cut into small pieces for individual pizzas.\n\n\n" +
-                "4.Dust the work surface and rolling pin with some flour before rolling out the dough.\n\n\n" +
-                "Prepare the topping:\n\n\n" +
-                "1.Pre-heat oven at its highest mark and flour your baking tray.\n\n\n" +
-                "2.Now, using a rolling pin, roll out the freshly made pizza dough and place on the tray.\n\n\n" +
-                "3.Spread a thin layer of passata sauce and cover with mozarella cheese and sprinkle basil leaves.\n\n\n" +
-                "4.Put the tray into the oven for 10 to 12 minutes.\n\n\n" +
-                "5.After the pizza is baked remove from the oven and drizzle extra virgin olive oil and some pepper.\n\n\n" +
-                "6.Garnish with fresh basil and cut into slices.";
-        textPreparation.setText(prepare);
-        textPreparation.setMovementMethod(new ScrollingMovementMethod());
+            3.Add in the rest of yeast mixture and remaining olive oil.
+
+
+            4.Flour the kneading surface so that the dough does not stick.
+
+
+            5.Mix together with your fingers till you have a dough. Knead for 10 minutes till you have an elastic, even product.
+
+
+            Proving the Dough:
+
+
+            1.Place the dough in a bowl and drizzle generously with extra virgin olive oil.
+
+
+            2.Cover bowl with cling film and place in a warm area to prove for 50 minutes.
+
+
+            3.After the dough is proved, bash the air out and cut into small pieces for individual pizzas.
+
+
+            4.Dust the work surface and rolling pin with some flour before rolling out the dough.
+
+
+            Prepare the topping:
+
+
+            1.Pre-heat oven at its highest mark and flour your baking tray.
+
+
+            2.Now, using a rolling pin, roll out the freshly made pizza dough and place on the tray.
+
+
+            3.Spread a thin layer of passata sauce and cover with mozarella cheese and sprinkle basil leaves.
+
+
+            4.Put the tray into the oven for 10 to 12 minutes.
+
+
+            5.After the pizza is baked remove from the oven and drizzle extra virgin olive oil and some pepper.
+
+
+            6.Garnish with fresh basil and cut into slices.
+            """.trimIndent()
+        textPreparation!!.text = prepare
+        textPreparation!!.movementMethod = ScrollingMovementMethod()
     }
 }

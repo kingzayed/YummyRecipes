@@ -1,56 +1,79 @@
-package com.zayed.admin.yummyrecipes;
+package com.zayed.admin.yummyrecipes
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.app.Activity
+import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 
-public class ChickenFriedRice extends Activity {
+class ChickenFriedRice : Activity() {
+    private var imageView: ImageView? = null
+    private var textName: TextView? = null
+    private var textingredients: TextView? = null
+    private var textPreparation: TextView? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.layout_chickenfriedrice)
+        imageView = findViewById<View>(R.id.imageview) as ImageView
+        textName = findViewById<View>(R.id.textname) as TextView
+        textingredients = findViewById<View>(R.id.ingredients) as TextView
+        textPreparation = findViewById<View>(R.id.Preparation) as TextView
+        val ing = """
+            1.1/2 Kg Long Grained Rice, boiled
 
-    private ImageView imageView;
-    private TextView textName;
-    private TextView textingredients;
-    private TextView textPreparation;
+            2.4-5 Tbsp Cooking Oil
+
+            3.150 Gram Boneless Chicken (diced)
+
+            4.100 Gram Prawns (deshelled)
+
+            5.2 Small Onions , finely chopped
+
+            6.4 Pieces Garlic, finely chopped
+
+            7.4 Red Chillies (grounded)
+
+            8.4-5 Tbsp Sweet Soya Sauce
+
+            9.To taste Salt
+
+            10.To taste Pepper
+
+            11.For garnishing Fried eggs
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_chickenfriedrice);
+            """.trimIndent()
+        textingredients!!.text = ing
+        textingredients!!.movementMethod = ScrollingMovementMethod()
+        val prepare = """
+            1.Boil rice and keep aside.
 
 
-        imageView = (ImageView)findViewById(R.id.imageview);
-        textName = (TextView)findViewById(R.id.textname);
-        textingredients = (TextView)findViewById(R.id.ingredients);
-        textPreparation = (TextView) findViewById(R.id.Preparation);
+            2.Heat oil in a pan and saute the onion and garlic until golden brown.
 
 
-        String ing = "1.1/2 Kg Long Grained Rice, boiled\n\n" +
-                "2.4-5 Tbsp Cooking Oil\n\n" +
-                "3.150 Gram Boneless Chicken (diced)\n\n" +
-                "4.100 Gram Prawns (deshelled)\n\n" +
-                "5.2 Small Onions , finely chopped\n\n" +
-                "6.4 Pieces Garlic, finely chopped\n\n" +
-                "7.4 Red Chillies (grounded)\n\n" +
-                "8.4-5 Tbsp Sweet Soya Sauce\n\n" +
-                "9.To taste Salt\n\n" +
-                "10.To taste Pepper\n\n" +
-                "11.For garnishing Fried eggs\n\n";
-        textingredients.setText(ing);
-        textingredients.setMovementMethod(new ScrollingMovementMethod());
+            3.Add chicken and cook.
 
 
-        String prepare = "1.Boil rice and keep aside.\n\n\n" +
-                "2.Heat oil in a pan and saute the onion and garlic until golden brown.\n\n\n" +
-                "3.Add chicken and cook.\n\n\n" +
-                "4.Sprinkle in salt and pepper.\n\n\n" +
-                "5.When the chicken is almost done add the red chillies and then toss in the prawns.\n\n\n" +
-                "6.Stir fry for a few minutes.\n\n\n" +
-                "7.Add the sweet soya sauce and mix in the cooked rice.\n\n\n" +
-                "8.In another pan, make a double fried egg.\n\n\n" +
-                "9.Serve rice hot with a fried egg on top.";
-        textPreparation.setText(prepare);
-        textPreparation.setMovementMethod(new ScrollingMovementMethod());
+            4.Sprinkle in salt and pepper.
+
+
+            5.When the chicken is almost done add the red chillies and then toss in the prawns.
+
+
+            6.Stir fry for a few minutes.
+
+
+            7.Add the sweet soya sauce and mix in the cooked rice.
+
+
+            8.In another pan, make a double fried egg.
+
+
+            9.Serve rice hot with a fried egg on top.
+            """.trimIndent()
+        textPreparation!!.text = prepare
+        textPreparation!!.movementMethod = ScrollingMovementMethod()
     }
 }
